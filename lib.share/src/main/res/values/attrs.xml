@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ShareSimpleGridLayout">
+        <attr name="grid_column" format="integer" />
+        <attr name="grid_row_height" format="dimension" />
+        <attr name="grid_item_height_width_ratio" format="float" />
+        <attr name="grid_divider_width" format="dimension" />
+        <attr name="grid_vertical_divider_width" format="dimension" />
+        <attr name="grid_horizontal_divider_width" format="dimension" />
+        <attr name="grid_divider_color" format="color" />
+    </declare-styleable>
+</resources>

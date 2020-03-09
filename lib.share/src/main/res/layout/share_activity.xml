@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bgView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55000000"
+    android:clickable="true"
+    android:gravity="bottom"
+    android:onClick="onClick"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/shareBoard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#fc5759"
+            android:textSize="18dp"
+            tools:text="标题" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="4"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#555"
+            android:textSize="14dp"
+            tools:text="分享好友奖励TB" />
+
+        <com.trc.android.share.ShareSimpleGridLayout
+            android:id="@+id/grid_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:grid_column="3"
+            app:grid_row_height="80dp">
+
+            <FrameLayout
+                android:id="@+id/wexin"
+                style="@style/ShareFrameItem">
+
+                <ImageView
+                    style="@style/ShareImageStyle"
+                    android:src="@drawable/image_selector_wechat" />
+
+                <TextView
+                    style="@style/ShareTextStyle"
+                    android:text="微信" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/weixinpengyouquan"
+                style="@style/ShareFrameItem">
+
+                <ImageView
+                    style="@style/ShareImageStyle"
+                    android:src="@drawable/image_selector_friends" />
+
+                <TextView
+                    style="@style/ShareTextStyle"
+                    android:text="朋友圈" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sina"
+                style="@style/ShareFrameItem">
+
+                <TextView
+                    style="@style/ShareTextStyle"
+                    android:text="微博" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    style="@style/ShareImageStyle"
+                    android:src="@drawable/image_selector_sina" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/qq"
+                style="@style/ShareFrameItem">
+
+                <ImageView
+                    style="@style/ShareImageStyle"
+                    android:src="@drawable/image_selector_qq" />
+
+                <TextView
+                    style="@style/ShareTextStyle"
+                    android:text="QQ" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/qzone"
+                style="@style/ShareFrameItem">
+
+                <ImageView
+                    style="@style/ShareImageStyle"
+                    android:src="@drawable/image_selector_qzone" />
+
+                <TextView
+                    style="@style/ShareTextStyle"
+                    android:text="QQ空间" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/dingding"
+                style="@style/ShareFrameItem"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    style="@style/ShareImageStyle"
+                    android:src="@drawable/umeng_socialize_dingding" />
+
+                <TextView
+                    style="@style/ShareTextStyle"
+                    android:text="钉钉" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/clipboard"
+                style="@style/ShareFrameItem">
+
+                <ImageView
+                    style="@style/ShareImageStyle"
+                    android:src="@drawable/share_copy" />
+
+                <TextView
+                    style="@style/ShareTextStyle"
+                    android:text="复制" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/photoalbum"
+                style="@style/ShareFrameItem"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    style="@style/ShareImageStyle"
+                    android:src="@drawable/share_photo" />
+
+                <TextView
+                    style="@style/ShareTextStyle"
+                    android:text="生成封面" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/browser"
+                style="@style/ShareFrameItem"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    style="@style/ShareImageStyle"
+                    android:src="@drawable/share_browser" />
+
+                <TextView
+                    style="@style/ShareTextStyle"
+                    android:text="浏览器" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/mina"
+                style="@style/ShareFrameItem"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    style="@style/ShareImageStyle"
+                    android:src="@drawable/image_selector_wechat" />
+
+                <TextView
+                    style="@style/ShareTextStyle"
+                    android:text="微信小程序" />
+            </FrameLayout>
+        </com.trc.android.share.ShareSimpleGridLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#c9c9c9" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#00000000"
+            android:onClick="onClick"
+            android:text="取消"
+            android:textColor="#808080" />
+    </LinearLayout>
+
+</LinearLayout>
